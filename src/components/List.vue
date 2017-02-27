@@ -73,10 +73,10 @@ export default {
   created () {
     bus.$on('tip', (text) => {
       this.tip = text
+      this.getLists()
     })
   },
   ready () {
-    this.getLists()
     console.log('数据取出来了吗')
   },
   methods: {
